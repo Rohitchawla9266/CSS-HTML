@@ -1,0 +1,63 @@
+.container {
+    height: 350px;
+    width: 100%;
+    border: 2px solid rgb(111, 0, 255);
+    display: flex;
+    flex-direction: row;
+    /* flex-direction: column-reverse; */
+    /* this flex wrap is use when we decrease the resolution of page so it will get wrap it will try to squueze */
+    flex-wrap: wrap;
+    /* thsis will help us to cntre the these div tags  */
+    justify-content: center;
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+    /* justify-content: space-between; */
+
+    /* align-items: center; */
+    /* align-items: baseline; */
+    /* align-items: stretch; */
+    /* flex-direction: column; */
+
+}
+.item {
+    background-color: rgb(255, 234, 47);
+    border: 2px solid  red;
+    padding: 5px;
+    margin: 10px;
+    width: 100px;
+    height: 100px;  
+}
+/* Order menas if we give the order 10 then this box will go to the end and if we give the order in 3rd box > box2 then box3 will went to last */ 
+
+/* when flex-direction sets to row and then if we add flex basis then the width will increrase of item 2 and when the flex-direction sets to column and then if we add flex-basis so height will increase  */
+#item-2 {
+    order: 10;
+    flex-basis: 200px;
+    /* flex grow means that box will stretch mopre faster -ve numbers are invalid or we can give flex-shrink  */ 
+    /* flex-shrink: 3; */
+    /* flex-grow: 3; */
+}
+#item-3 {
+    /* flex-shrink: 5; */
+    /* flex-grow: 5; */
+    order: 12;
+}
+#item-4 { 
+    /* flex:2 2 500px this means we can add flex-grow , flex-shrink , and flex basis */
+    /* flex: 2 2 100px; */
+    /* align-self: flex-end; */
+    /* align-self: flex-start; */
+    align-self: center;
+}
+
+/* #item-6 {
+     display: flex;
+    flex-direction: column-reverse;
+    font-size: 20px;
+    flex-direction: row-reverse;
+
+} */
+
+
+
+
