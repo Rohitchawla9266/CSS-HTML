@@ -1,0 +1,23 @@
+.container {
+    font-size: 10px;
+    border: 2px solid red;
+    height: 100vh;
+    /* as vh will took the whole height of the page  */
+}
+
+h1{
+    text-align: center;
+} 
+
+#first { 
+
+    /* As this em means the times of container or parent class for ex the font size of of parent class is 10px and font size of first haeding is 10em so it will tell 100px as 10*10 and if we decrease the size of container so the size of height will also decrease */
+    font-size: 3em; 
+/* as now padding will be 90px because the font size is 3em and it will take padding according to this and we give padding 3em so it will 3*3*10 = 90px and and if we give the padding of 5 so it will be 5*3*10 = 150px   */
+
+    padding: 3em;
+} 
+
+
+
+
