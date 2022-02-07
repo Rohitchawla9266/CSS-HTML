@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+}
+
+.card  {
+    border: 3px solid red;
+    margin:20px 10px ;
+    padding: 20px 10px ;
+    background-color: springgreen;
+    /* box-shadow: 10px 2px 10px 15px rgb(40, 223, 223); */
+    /* box-shadow: inset 20px 10px green; */
+}   
+
+.card h2 {
+    text-shadow: 0px 2px rgb(34 145 197);;
+}
+variable   {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+.box { 
+    /* -- this is used for creating a variable this means if we want to change the colour of all box by just changing the colour at one place  */
+    --box-color: rgb(13, 214, 197) ;
+    height: 100px;
+    width: 100px;
+    background-color: var(--box-color);
+    box-shadow:4px 4px var(--box-color) ;
+    border: 2px solid red;
+    margin: 10px 20px;
+    padding: 10px 20px;
+}
+
+.animation  {
+    display: flex;
+    background-color: aqua;
+}
+
+.style  {
+    background-color: aliceblue;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    animation-name: rohit1;
+    animation-name: rohit2;
+    animation-duration: 6s;
+    /* animation-iteration-count: 3;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; */
+    /* animation-delay: 3s; */
+    /* animation:animation-mame animation duration timing function delay iteration count fill mode  */
+    /* animation:rohit1 6s ease-in 2s 3 forwards; */
+}
+
+
+@keyframes rohit2 {
+    0% {
+        top: 0px;
+        left: 250px;
+    }
+    25% {
+        top: 250px;
+        left: 250px;
+     }
+    50% {
+        top: 250px;
+        left: 0px;
+
+     }
+    100% {
+        top: 0px;
+        left: 0px;
+    }    
+}   
+
+@keyframes rohit1 {
+    from{
+        width: 100px;
+    }
+    to {
+        width: 1000px;
+    }
+    
+}
+

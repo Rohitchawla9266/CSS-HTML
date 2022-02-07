@@ -1,0 +1,29 @@
+#box {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    background-color: aqua;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition-property: background-color;
+    /* transition-duration: 2s;
+    transition-timing-function: ease-in; */
+    /* transition:property , duration , timing function , derlay  short hand property */
+    /* transition-delay: 1s; */
+    /* transition: background-color 2s ease-out 0s; */
+    
+    
+    
+    transition: all 2s ease-out 0s;
+
+
+}
+
+#box:hover {
+    background-color: rgb(57, 207, 200);
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+    font-size: 35px;
+}
