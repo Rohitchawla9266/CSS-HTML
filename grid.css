@@ -1,0 +1,147 @@
+h2 {
+    font-size: 20px;
+    color: chocolate;
+}
+
+
+.container {
+    display: grid;
+    /* this grid template cols divide the box into three cols of width 300 , 100, 200px */
+     grid-template-columns: 300px 100px 200px;
+    /*grid-template-columns: 300px auto 200px; 
+    /* grid-template-columns: 300px 100px auto; */
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: repeat(3,auto);
+    grid-gap: 3px;
+    grid-template-columns: repeat(auto-fit ,minmax(400px, 1fr));
+
+
+    /* display: flex; */
+}
+
+.item {
+    /* height: 100px;
+    width: 100px; */
+    background-color: aqua;
+    margin: 5px;
+    border: 2px solid black;
+
+    padding: 20px 5px;
+}
+
+.container1 {
+    display:grid;
+    /* in grid template rows it divide the 1st , 2nd and 3rd row in 1,1,4fr and grid auto rows it will divide the all the rows which was not defined in grid template rows  */
+    grid-template-rows:1fr 1fr 4fr  ;
+    grid-auto-rows: 3fr;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit ,minmax(400px, 1fr));
+}
+
+.box  {
+    background-color: rgb(17, 175, 180);
+    border: 2px solid rgb(219, 21, 21);
+}
+
+.rows {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(4, 2fr);
+    grid-column-gap:10rem ;
+    grid-row-gap:5rem ;
+    grid-gap: 5px;
+     grid-template-columns: repeat(auto-fit ,minmax(400px, 1fr));
+}
+
+.grid {
+    border: 3px solid red;
+    background-color: aqua;
+    padding:23px ;
+}
+
+.grid:first-child {
+    grid-column-start:1 ;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3; 
+}
+
+.autofit{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit ,minmax(400px, 1fr));
+    /* grid-template-columns: 120px 120px 120px; */
+
+    /* justify-content: center;
+    align-items:center ; */
+    /* grid-template-rows: repeat(4,1fr);
+    grid-column-gap:10px;
+    grid-row-gap:20px; */
+    /* grid-gap: 100px; */
+    
+
+}
+
+.minmax{
+    border: 3px solid red;
+    background-color: burlywood;
+    border-color: black;
+    padding: 35px;
+
+
+}
+
+.template {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-areas: 
+    
+    'navbar navbar navbar navbar' 
+    'section section section aside';
+    grid-template-columns: repeat(auto-fit ,minmax(400px, 1fr));
+
+}
+
+
+
+.layout {
+    background-color: yellow;
+    border: 3px solid red;
+    padding: 12px 20px ;
+}
+
+#navbar{
+    grid-area: navbar;
+}
+#section{
+    grid-area: section;
+}
+#aside{
+    grid-area: aside;
+}
+
+@media (max-width:200px) {
+    body {
+        background-color: aqua;
+    }
+}
+@media (min-width:200px) and (max-width:400px) {
+    body {
+        background-color: rgb(255, 187, 0);
+    }
+    
+}
+@media (min-width:400px) and (max-width:800px) {
+    body {
+        background-color: rgb(157, 224, 1);
+    }
+    
+}
+
+@media (min-width:801px)  {
+    body {
+        background-color: rgb(20, 59, 235);
+    }
+    
+}
