@@ -21,7 +21,7 @@ body{
     top:50%;
     background: linear-gradient( 90deg, white,rgb(229, 229, 230), 50%, transparent 50%, transparent 50%);
     background-size: 50px;
-    animation: animate_road 2s linear infinite ;
+    animation: animate_road 0.1s linear infinite ;
     
 }
 @keyframes animate_road {
@@ -29,9 +29,7 @@ body{
         background-position: 50px 0 ;
     }
 }
-    100%{
-        background-position: 0px 0 ;
-    }
+   
 .taxi{
     position: absolute;
     height: 70px;
@@ -40,7 +38,41 @@ body{
     background: yellow;
     left: 45px;
     border-radius: 10px;
-    box-shadow: -10px 10px rgb(126, 114, 114);
+    box-shadow: -10px 10px rgba(0,0,0,0.25);
+    transform-style: preserve-3d;
+    perspective: 900px;
+    animation: animate_taxi 2s linear infinite;
+
+}
+.taxi:nth-child(2){
+    left: initial;
+    left: 280px ;
+    z-index: 10;
+    animation-delay: -2s;
+
+    animation: animate_taxi 3s linear  infinite;
+}
+ @keyframes animate_taxi {
+     0%{
+        transform: translateX(-20px) translateY(-50px);
+        background-position: 50px 0 ;  
+    }
+    25%{
+        transform: translateX(10px) translateY(0px);
+        background-position: 50px 0 ;
+    }
+    50%{
+        transform: translateX(20px) translateY(-20px);
+        background-position: 50px 0 ;
+    }
+    75%{
+        transform: translateX(0px) translateY(0px);
+        background-position: 50px 0 ;
+    }
+    100%{
+        transform: translateX(20px) translateY(-20px);
+        background-position: 50px 0 ;
+    }
 }
 .taxi::before{
    content: "";
@@ -51,6 +83,7 @@ body{
    background: red;
    position: absolute; 
    box-shadow:0px 42px red ;
+   overflow: hidden;
 }
 .taxi::after{
     content: "";
@@ -67,6 +100,7 @@ body{
     inset: 5px 10px; 
     background: rgb(241, 199, 9);
     border-radius: 10px;
+    overflow: hidden;
 }
 .taxi span::before{
     content: "Taxi";
@@ -79,7 +113,116 @@ body{
     font-family: 'Times New Roman', Times, serif;
     font-weight: 2px;
     border-radius: 2px;
-    z-index: 10;
+    z-index: 10; 
 
     /* font-weight: 100; */
+}
+.taxi span b{
+    position: absolute;
+    inset: 0px 15px;
+    background-color: rgb(19, 18, 18);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.taxi span b::before{
+    content: "";
+    position: absolute;
+    inset:7px 15px;
+    background: yellow;
+    border-radius: 10px;
+}
+.taxi span b::after{
+    content: "";
+    position: absolute;
+    inset:0px 48px;
+    background: yellow;
+    /* border-radius: 10px; */
+}
+.taxi span i {
+    position: absolute;
+    inset: 0;
+
+}
+.taxi span i::before{
+    content: "";
+    position: absolute;
+    height: 20px; 
+    width: 5px;
+    top: -2px;
+    left: 20px;
+    background:yellow;
+    transform-origin: right;
+    transform:rotate(120deg);
+    box-sizing: border-box;
+    
+    
+}
+.taxi span i::after{
+    content: "";
+    position: absolute;
+    height: 21px; 
+    width: 5px;
+    top: 40px;
+    left: 20px;
+    background:yellow;
+    transform-origin: right;
+    transform:rotate(240deg);
+}
+.taxi span i1 {
+    position: absolute;
+    inset: 0;
+
+}
+.taxi span i1::before{
+    content: "";
+    position: absolute;
+    height: 17px; 
+    width: 5px;
+    top: -3px;
+    left:99px;
+    background:yellow;
+    transform-origin: right;
+    transform:rotate(240deg);
+}
+.taxi span i1::after{
+    content: "";
+    position: absolute;
+    height: 17px; 
+    width: 5px;
+    top: 45px;
+    left:100px;
+    background:yellow;
+    transform-origin: right;
+    transform:rotate(120deg);
+}
+.taxi .light_beam{
+    border-radius: 15px;
+    position: absolute;
+    top: 14px;
+    right: 0px;
+    height: 46px;
+    width: 2px;
+    background: yellow;
+}
+.taxi .light_beam::before{
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0px;
+    height: 10px;
+    width: 100px;
+    background: linear-gradient(90deg,white,transparent);
+    transform-origin: left;
+    transform:perspective(200px)rotateY(-40deg) ;
+}
+.taxi .light_beam::after{
+    content: "";
+    position: absolute;
+    top: 33px;
+    left: 0px;
+    height: 10px;
+    width: 100px;
+    background: linear-gradient(90deg,white,transparent);
+    transform-origin: left;
+    transform:perspective(200px)rotateY(-40deg) ;
 }
